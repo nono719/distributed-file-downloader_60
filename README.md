@@ -131,3 +131,16 @@ GET /download?path=ipfs://Qmxxx
 
 5. 浏览目录
 GET /ls?path=cns://abc.test
+
+
+## 分支管理规范
+
+本项目采用 “Feature-branch Workflow” 进行版本管理与协作：
+
+- `main` 分支为稳定主分支，仅用于存放已测试通过的代码。  
+- 所有新功能、修改或 bug 修复都应创建新的 feature 分支，例如 `feature-xxx`。  
+- 在 feature 分支完成开发后，应推送至远端，并在 GitHub 上发 Pull Request (PR)，说明变更内容。  
+- PR 经测试／审核无误后合并到 main，合并后可删除 feature 分支。  
+- 合并过程中若发生冲突，应手动解决冲突后再合并/推送。  
+
+这样可以保证主干稳定，并且便于多人协作，防止功能混杂、代码混乱。
